@@ -86,8 +86,8 @@ void peopels_add(void)
         printf("请输入工人性别:  ");
         fscanf(stdin, "%s", p.p_sex);
         printf("请输入工人密码:(6位,注意保护自己的密码)  ");
-        fscanf(stdin, "%s", p.passwd);
-        // md5_string(passwd, p.passwd);
+        fscanf(stdin, "%s", passwd);
+        md5_string(passwd, p.passwd);
         printf("请输入工人编号:(8位)  ");
         fscanf(stdin, "%s", p.p_num);
         printf("请输入工人身份证号:(18位合法)  ");

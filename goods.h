@@ -10,10 +10,11 @@ typedef struct
     char is_delete;     //商品现存状态（1表示存在，0表示被删除）
     char goodstype[20]; //商品类型
     char factory[46];   //厂家
+    char time[50];      //商品进货时间
 //char类型的数据放在一起定义，节省内存空间
 
     float price;        //商品价格
-    int time;           //商品进货时间
+    
     int input_num;      //商品进货数量
     int inventory;        //商品库存
     int discont;        //商品折扣

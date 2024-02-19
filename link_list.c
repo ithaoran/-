@@ -228,7 +228,7 @@ void showall_goods(list l)
     {
         if(p -> data.is_delete == '1')
         {
-            printf("\n商品名: %s\n商品类型: %s\n商品ID: %s\n商品价格: %.2f\n商品进货数量: %d\n商品现存数量:%d\n生产商:%s\n入库时间:%d\n商品折扣:%d",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time, p -> data.discont);
+            printf("\n商品名: %s\n商品类型: %s\n商品ID: %s\n商品价格: %.2f\n商品进货数量: %d\n商品现存数量:%d\n生产商:%s\n入库时间:%s\n商品折扣:%d",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time, p -> data.discont);
         }
 
         p = p -> next;
@@ -248,22 +248,22 @@ void output_l(list l, void* data, int(*cmp)(void*, void*))
     {
         if(cmp(&(p -> data), data) == 1)
         {
-            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%d \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
+            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%s \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
             flag++;        
         }
         else if(cmp(&(p -> data), data) == 2)
         {
-            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%d \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
+            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%s \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
             flag++;        
         }
         else if(cmp(&(p -> data), data) == 3)
         {
-            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%d \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
+            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%s \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
             flag++;        
         }
         else if(cmp(&(p -> data), data) == 4)
         {
-            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%d \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
+            printf("\n商品名:%s \n商品类型:%s \n商品ID:%s \n商品价格:%.2f \n商品进货数量:%d \n商品库存:%d \n生产商:%s \n入库时间:%s \n",p -> data.name, p -> data.goodstype, p -> data.id, p -> data.price, p -> data.input_num, p -> data.inventory, p -> data.factory, p -> data.time);
             flag++;        
         }
 

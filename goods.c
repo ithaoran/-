@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "link_list.h"
 #include "goods.h"
 
@@ -50,7 +51,17 @@ void goods_add(void)
         g.inventory = g.input_num;
         printf("请输入进货厂家:");
         fscanf(stdin, "%s", g.factory);
-        g.time = time(NULL);
+
+        time_t rawtime;
+        struct tm* info;
+        char buff[80];
+
+        time(&rawtime);
+
+        info = localtime(&rawtime);
+        strcpy(g.time, asctime(info));
+        // g.time = asctime(info);
+
         g.is_delete = '1';
         printf("\n loading ......\n");
 
@@ -137,7 +148,7 @@ void goods_change()
             int flag = find_pos(gs, change_str, cmp_str);       //找到要修改商品的位置
             change_g = (goods*)find_data(gs, flag);
             printf("已为您找到该商品的信息如下: \n");
-            printf("\n商品名: %s\n商品类型: %s\n商品ID: %s\n商品价格: %.2f\n商品进货数量: %d\n商品现存数量:%d\n生产商:%s\n入库时间:%d\n商品折扣:%d", change_g -> name, change_g -> goodstype, change_g -> id, change_g -> price, change_g -> input_num,change_g -> inventory, change_g -> factory, change_g -> time, change_g -> discont);
+            printf("\n商品名: %s\n商品类型: %s\n商品ID: %s\n商品价格: %.2f\n商品进货数量: %d\n商品现存数量:%d\n生产商:%s\n入库时间:%s\n商品折扣:%d", change_g -> name, change_g -> goodstype, change_g -> id, change_g -> price, change_g -> input_num,change_g -> inventory, change_g -> factory, change_g -> time, change_g -> discont);
 
             //开始修改商品，使用循环套起来可以多次修改一个数据，防止误操作
             while (1)
