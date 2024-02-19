@@ -6,7 +6,7 @@
 
 typedef struct people 
 {
-    char passwd[7];     //密码
+    char passwd[100];     //密码
     char p_num[9];       //工号
     char p_name[21];    //姓名
     char p_sex[5];      //性别

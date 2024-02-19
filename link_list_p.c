@@ -229,7 +229,7 @@ void showall_peoples(list_p l)
     {
         if(p -> data.is_delete == '1')
         {
-            printf("\n\n姓名: %s\n性别: %s\n工号: %s\n身份证号: %s\n电话号码: %s\n住址:%s",p -> data.p_name, p -> data.p_sex, p -> data.p_num, p -> data.p_id, p -> data.p_phone, p -> data.p_where);
+            printf("\n\n姓名: %s\n性别: %s\n工号: %s\n身份证号: %s\n电话号码: %s\n住址:%s\n密码:%s\n",p -> data.p_name, p -> data.p_sex, p -> data.p_num, p -> data.p_id, p -> data.p_phone, p -> data.p_where, p-> data.passwd);
             flag++;
         }
 

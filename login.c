@@ -27,7 +27,7 @@ void login_auth(void)
     disable();
     scanf("%s", upass);
     enable();
-    // md5_string(upass, upass_md5);
+    md5_string(upass, upass_md5);
 
     FILE* fp = fopen(USER_INFO_FILE, "rb");
 
@@ -36,7 +36,7 @@ void login_auth(void)
 
     while(fread(&ui, sizeof(ui), 1, fp) == 1)
     {
-        if(strcmp(ui.p_name, uname) == 0 && strcmp(ui.passwd, ui.passwd) == 0)
+        if(strcmp(ui.p_name, uname) == 0 && strcmp(ui.passwd, upass_md5) == 0)
         {
             auth_flag = 1;
             break;
